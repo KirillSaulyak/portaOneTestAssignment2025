@@ -28,6 +28,16 @@ public class RepairText {
         }
     }
 
+    public String repair() {
+        buildSentence(oneGram.getGramWords(), threeGram.getGramWords());
+        return getResult();
+
+    }
+
+    public String getResult() {
+        return result;
+    }
+
     private String getUnprocessedText() {
         return unprocessedText;
     }
@@ -58,11 +68,6 @@ public class RepairText {
 
     private void clearBlockedText() {
         this.blockedText = "";
-    }
-
-    public void repair() {
-        buildSentence(oneGram.getGramWords(), threeGram.getGramWords());
-        System.out.println("Result:\n" + result);
     }
 
     private void deleteFoundText(String foundText) {
