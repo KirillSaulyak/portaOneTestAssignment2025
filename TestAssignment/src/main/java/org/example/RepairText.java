@@ -106,10 +106,10 @@ public class RepairText {
 
     private void buildSentence(List<String> oneGramWords, List<String> threeGramWords) {
 
-        String matchedThreeGrams = "";
+        String matchedThreeGrams;
 
         while (!getUnprocessedText().trim().isEmpty()) {
-            String matchedText = "";
+            String matchedText;
 
             matchedThreeGrams = findThreeGramMatches(threeGramWords, getUnprocessedText());
             if (!matchedThreeGrams.isEmpty()) {
